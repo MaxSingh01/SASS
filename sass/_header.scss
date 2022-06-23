@@ -1,0 +1,21 @@
+.header {
+    grid-column: full-start/full-end;
+    background-image: linear-gradient(to right bottom,
+            rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero-small.jpg);
+
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    display: grid;
+    background-size: cover;
+    grid-column: 1/-1;
+    position: relative;
+    grid-template-rows: 1fr min-content minmax(6rem, min-content) min-content 1fr;
+    grid-template-columns: 1fr;
+
+    &__logo {
+        display: grid;
+        height: 3.5rem;
+        margin-top: 4rem;
+        margin-left: 4rem;
+    }
+
+}

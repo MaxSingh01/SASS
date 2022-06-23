@@ -1,0 +1,73 @@
+// COLORS
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+
+$color-white: #fff;
+$color-black: #000;
+
+$default-font-size: 1.6rem;
+$bp-desktop : 112.5em; //1800px
+$bp-tab-land: 75em;   // 1200px
+$bp-tab-port: 56.25em;   // 900px
+$bp-phone: 37.5em;    // 600px;
+
+
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%; //1rem = 10px
+    @media only screen and (max-width: $bp-tab-land) {
+        font-size: 56.2%
+    }
+    @media only screen and (max-width: $bp-tab-port) {
+        font-size: 50%
+    }
+    @media only screen and (max-width: $bp-phone) {
+        font-size: 43.7%
+    }
+    @media only screen and (min-width: $bp-desktop) {
+        font-size: 75%;
+    }
+   
+}
+body{
+    background-color: $color-grey-light-1;
+    box-sizing: border-box;
+    padding: 3rem;
+
+    @media only screen and (max-width: $bp-tab-port) {
+        padding: 0;
+    }
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 95vh min-content repeat(3,min-content);
+    grid-template-columns: [full-start ] minmax(6rem,1fr) [col-start] repeat(8,minmax(min-content,18rem)) [col-end] minmax(6rem,1fr) [full-end];
+    
+}

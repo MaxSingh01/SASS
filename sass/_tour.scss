@@ -1,0 +1,13 @@
+.section-tours{
+    background-color: $color-grey-light-1;
+    grid-column: 1/-1;
+    margin-top: 15rem;
+
+
+    .row{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+        grid-gap: 4rem;
+    }
+
+}
